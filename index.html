@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="main_css.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="calculater-box">
+        <form>
+            <table>
+                <tr>
+                    <td colspan="5"><p id="dispaly"></p></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" id="num_1" value="1" onclick="number_01_btn()"></td>
+                    <td><input type="button" id="num_2" value="2" onclick="number_02_btn()"></td>
+                    <td><input type="button" id="num_3" value="3" onclick="number_03_btn()"></td>
+                    <td><input type="button" id="add_btn" value="+" onclick="add_button()"></td>
+                    <td><input type="button" id="sub_btn" value="-" onclick="sub_button()"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" id="num_4" value="4" onclick="number_04_btn()"></td>
+                    <td><input type="button" id="num_5" value="5" onclick="number_05_btn()"></td>
+                    <td><input type="button" id="num_6" value="6" onclick="number_06_btn()"></td>
+                    <td><input type="button" id="mul_btn" value="X" onclick="mul_button()"></td>
+                    <td><input type="button" id="div_btn" value="/" onclick="div_button()"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" id="num_7" value="7" onclick="number_07_btn()"></td>
+                    <td><input type="button" id="num_8" value="8" onclick="number_08_btn()"></td>
+                    <td><input type="button" id="num_9" value="9" onclick="number_09_btn()"></td>
+                    <td colspan="2"><input type="button" id="clear_btn" value="C" onclick="cl_button()"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="3"><input type="button" id="num_0" value="0" onclick="number_0_btn()"></td>
+                    <td colspan="2"><input type="button" id="equal_btn" value="=" onclick="eq_button()"></td>
+
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
