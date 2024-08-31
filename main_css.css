@@ -1,41 +1,62 @@
-* {
-    margin : 0;
-    padding: 0;
-    font-family: sans-serif;
+.calculator {
+    max-width: 400px;
+    margin: 100px auto;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-body {
-    background-color: black;
-}
-
-table,tr,td {
-    border: 5px solid #625252;
-    background-color: rgba(0, 0, 0, 0.39);
-}
-
-td{
-    width: 50px;
+.display {
     height: 50px;
+    background-color: #f8f9fa;
+    text-align: right;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    line-height: 50px;
 }
 
-input[type=button] {
-    width: 100%;
-    height: 100%;
-    font-weight: bold;
-    font-size: 15px;
-    background-color: rgba(196, 49, 49, 0.39);
-    color: #f1f1f1;
-    border-color: #319cf1;
+.btn {
+    font-size: 1.2rem;
+    height: 70px;
 }
 
-.calculater-box {
-    margin: 100px;
+.btn-operator {
+    background-color: #007bff;
+    color: white;
 }
 
-p {
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 35px;
-    text-align:right;
-    color: #f1f1f1;
+.btn-operator:hover {
+    background-color: #0056b3;
+}
+
+.btn-clear {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-clear:hover {
+    background-color: #c82333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .calculator {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .btn {
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    .display {
+        font-size: 1.5rem;
+        height: 50px;
+        line-height: 50px;
+    }
 }

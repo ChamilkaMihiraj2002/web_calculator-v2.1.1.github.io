@@ -5,92 +5,82 @@ function assign (re_value) {
     assign_number = assign_number + re_value;
 }
 
-function number_01_btn () {
-    let num_01 = document.getElementById("num_1").value;
-    assign(num_01);
+function btn_read (value) {
+    assign(value);
     display(assign_number);
 }
 
-function number_02_btn () {
-    let num_02 = document.getElementById("num_2").value;
-    assign(num_02);
+function btn_get (value) {
+    switch (value) {
+        case '1':
+            btn_read('1');
+            break;
+        case '2':
+            btn_read('2');
+            break;
+        case '3':
+            btn_read('3');
+            break;
+        case '4':
+            btn_read('4');
+        case '5':
+            btn_read('5');
+            break;
+        case '6':
+            btn_read('6');
+            break;
+        case '7':
+            btn_read('7');
+            break;
+        case '8':
+            btn_read('8');
+            break;
+        case '9':
+            btn_read('9');
+            break;
+        case '0':
+            btn_read('0');
+            break;
+    }
+}
+
+function decimal () {
+    let point = ".";
+    assign(point);
     display(assign_number);
 }
 
-function number_03_btn () {
-    let num_03 = document.getElementById("num_3").value;
-    assign(num_03);
-    display(assign_number);
-}
-
-function number_04_btn () {
-    let num_04 = document.getElementById("num_4").value;
-    assign(num_04);
-    display(assign_number);
-}
-
-function number_05_btn () {
-    let num_05 = document.getElementById("num_5").value;
-    assign(num_05);
-    display(assign_number);
-}
-
-function number_06_btn () {
-    let num_06 = document.getElementById("num_6").value;
-    assign(num_06);
-    display(assign_number);
-}
-
-function number_07_btn () {
-    let num_07 = document.getElementById("num_7").value;
-    assign(num_07);
-    display(assign_number);
-}
-
-function number_08_btn () {
-    let num_08 = document.getElementById("num_8").value;
-    assign(num_08);
-    display(assign_number);
-}
-
-function number_09_btn () {
-    let num_09 = document.getElementById("num_9").value;
-    assign(num_09);
-    display(assign_number);
-}
-
-function number_0_btn () {
-    let num_00 = document.getElementById("num_0").value;
-    assign(num_00);
-    display(assign_number);
-}
-
-function add_button () {
-    number_1 = parseInt(assign_number);
-    assign_number = "";
-    operator = "+";
-    display(operator);
-}
-
-function sub_button () {
+function calc (value) {
     number_1 = parseFloat(assign_number);
     assign_number = "";
-    operator = "-";
+    operator = value;
     display(operator);
 }
 
-function mul_button () {
-    number_1 = parseFloat(assign_number);
-    assign_number = "";
-    operator = "x";
-    display(operator);
+function select_op (value) {
+    switch (value) {
+        case '+':
+            calc("+");
+            break;
+        case '-':
+            calc("-");
+            break;
+        case 'x':
+            calc("x");
+            break;
+        case '/':
+            calc("/");
+            break;
+    }
 }
 
-function div_button () {
+function precentage () {
     number_1 = parseFloat(assign_number);
     assign_number = "";
-    operator = "/";
-    display(operator);
+    operator = "%";
+    answer = number_1 /100;
+    auto_memory = answer;
+    display(answer);
 }
 
 function cl_button () {
@@ -107,7 +97,7 @@ function Multiplication(num1,num2) { return num1 * num2;}
 function Divison(num1,num2) {
     try {
         if (num2 === 0) {
-            throw new_error = "Zero division";
+            throw "Zero division";
         } else {
             return num1 / num2;
         }
@@ -116,6 +106,8 @@ function Divison(num1,num2) {
         return 0;
     }
 }
+
+
 
 function selection (value_01,value_02,OP) {
     switch (OP) {
@@ -145,6 +137,6 @@ function eq_button () {
     } else {
         answer = selection(auto_memory, number_2,operator);
     }
-    auto_memory = answer;
+    auto_memory = parseFloat(answer);
     display(answer);
 }
